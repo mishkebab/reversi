@@ -9,7 +9,17 @@ if (typeof window === 'undefined'){
  * and two white pieces at [3, 3] and [4, 4]
  */
 function _makeGrid () {
+  let board = new Array(8).fill("anything").map(() => new Array(8));
+
+  console.log(board);
+  board[3][4] = new Piece("black")
+  board[4][3] = new Piece("black")
+  board[3][3] = new Piece("white")
+  board[4][4] = new Piece("white")
+
+  return board;
 }
+
 
 /**
  * Constructs a Board with a starting grid set up.
